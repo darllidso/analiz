@@ -1,17 +1,71 @@
-# ANALIZ
+# ANALIZ · Data Lab
 
-**ANALIZ** é um laboratório autoral onde **dados viram decisões**.  
-O projeto reúne estudos aplicados que conectam **finanças, dados e tecnologia**, com foco em **automação de processos**, **documentação orientada à regra de negócio** e **mensuração de impacto (ROI)**.
+**Analiz** é um laboratório pessoal de estudos aplicados em dados, criado para transformar análises técnicas em **clareza, estrutura e suporte à tomada de decisão**.
 
-Atualmente, a ANALIZ apresenta:
+O projeto nasce da ideia de que dados só geram valor quando conseguem ser compreendidos, explicados e sustentados ao longo do tempo, tanto por pessoas técnicas quanto por áreas de negócio.
 
-- **Documentação de processos**  
-  Estudos sobre como estruturar, explicar e manter processos técnicos e financeiros de forma clara, auditável e sustentável.
+---
 
-- **ROI em Dados**  
-  Conteúdos sobre avaliação de retorno em projetos de dados, incluindo um simulador simples de ROI e apoio de IA para análise e interpretação.
+## 🎯 O que é a Analiz
 
-- **Automação da PDD Fiscal**  
-  Projeto autoral que demonstra a automação de um processo de PDD Fiscal, com foco em governança, rastreabilidade, aplicação de regras fiscais e redução de tempo operacional.
+A Analiz não é um repositório de códigos soltos.
+É um espaço para documentar **como problemas reais são pensados, estruturados e resolvidos com dados**.
 
-Os materiais têm caráter **educacional e autoral**, utilizando cenários simulados para demonstrar lógica de negócio, estrutura de automação e boas práticas de documentação.
+Aqui, cada iniciativa parte de três princípios:
+
+- **Clareza**: regras, decisões e lógicas precisam ser entendidas, não apenas executadas.  
+- **Governança**: processos devem ser rastreáveis, reproduzíveis e confiáveis.  
+- **Impacto**: análises existem para apoiar decisões e gerar valor real.
+
+---
+
+## 🧠 Abordagem
+
+A Analiz explora dados sob diferentes perspectivas, como:
+
+- documentação de processos e regras de negócio  
+- tradução de soluções técnicas para linguagem executiva  
+- avaliação de impacto e retorno (ROI)  
+- automação de rotinas críticas  
+- organização do conhecimento para reutilização e escala  
+
+O foco não está apenas no resultado final, mas no **raciocínio por trás das decisões**.
+
+---
+
+## 🤖 Uso de Inteligência Artificial
+
+A IA é utilizada como **ferramenta de apoio**, nunca como substituição do pensamento analítico.
+
+Ela auxilia principalmente em:
+
+- organização de ideias  
+- estruturação de documentação  
+- geração de fluxos e pseudocódigos  
+- tradução de conceitos técnicos para linguagem de negócio  
+
+O objetivo é ganhar velocidade sem perder responsabilidade, contexto ou criticidade.
+
+---
+
+## 🚀 Propósito do projeto
+
+A Analiz foi criada para:
+
+- consolidar aprendizados práticos em dados  
+- servir como portfólio vivo de raciocínio analítico  
+- demonstrar maturidade na relação entre dados, processos e decisão  
+- mostrar que bons projetos não dependem apenas de tecnologia, mas de clareza  
+
+---
+
+## 👩‍💻 Autoria
+
+Projeto desenvolvido por **Darlliane Oliveira**  
+
+🔗 LinkedIn: https://www.linkedin.com/in/darlliane-oliveira/  
+🔗 GitHub: https://github.com/darllidso  
+
+---
+
+> Dados bem estruturados sustentam decisões melhores.
