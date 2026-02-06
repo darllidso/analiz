@@ -3,91 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Analiz | Estúdio de Dados</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --red:#EC0000; --dark:#333333; --gray:#6D6D6D; --light:#C2C2C2; --bg:#F0F0F0; }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html,body{height:100%}
-    body{font-family:Poppins, sans-serif;background:var(--bg);color:var(--dark);line-height:1.6;overflow-x:hidden;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-    img{max-width:100%;height:auto;display:block}
+  <title>Analiz · Data Lab</title>
+  <meta name="description" content="Portfólio de projetos em Análise de Dados: dashboards, automações e estudos aplicados com foco em eficiência operacional e suporte à decisão." />
 
-    .hero-outer{background:#fff;border-bottom:1px solid #eee;flex-grow:1}
-    .hero{display:grid;grid-template-columns:1fr;align-items:center;gap:22px;max-width:1100px;margin:0 auto;padding:28px 18px}
-    @media(min-width:900px){.hero{grid-template-columns:0.9fr 1.1fr;gap:40px;padding:40px 24px}}
-    .hero-media{display:flex;justify-content:center;align-items:center}
-    .hero-media img{width:min(62vw,300px);aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 8px 22px rgba(0,0,0,.08)}
-    @media(min-width:900px){.hero-media img{width:70%;max-width:360px}}
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    .hero-content h1{font-size:clamp(1.6rem,4vw,2.6rem);color:var(--red);line-height:1.15;margin-bottom:6px}
-    .hero-content h2{font-weight:400;color:#8b8b8b;font-size:clamp(1rem,2.4vw,1.35rem);margin-bottom:10px}
-    .hero-content .highlight{color:var(--red);font-weight:700;font-size:clamp(.98rem,2.2vw,1.05rem);margin-bottom:4px;display:inline-block}
-    .hero-content p{color:#565656;margin:8px 0 16px;font-size:clamp(.95rem,2.2vw,1rem)}
+  <!-- CSS externo -->
+  <script src="assets/js/head.js"></script>
 
-    .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .cta-knowledge { flex: 1; min-width: 180px; text-align: center; padding: 12px 20px; background: var(--red); color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px; box-shadow: 0 8px 18px rgba(236,0,0,.2); transition: transform .08s ease, box-shadow .2s ease, background .2s ease; }
-    .cta-knowledge:hover { background: #c80000; box-shadow: 0 10px 24px rgba(236,0,0,.26); }
-    .cta-knowledge:active { transform: translateY(1px); }
-
-    footer{background:var(--dark);color:#fff;text-align:center;font-size:.95rem;padding:20px}
-    footer a{color:#fff;text-decoration:underline;font-weight:600}
-
-    .btn-analiz{position:fixed;right:12px;bottom:24px;background:#6D6D6D;color:#fff;border:none;padding:12px 18px;font-size:1rem;font-weight:600;border-radius:30px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.2);transition:.3s;z-index:1000}
-    .btn-analiz:hover{background:#333}
-
-    #analiz-sidebar{position:fixed;top:0;right:-400px;width:min(92vw,380px);height:100%;background:#fff;box-shadow:-2px 0 15px rgba(0,0,0,.2);transition:right .4s ease;padding:40px 25px;overflow-y:auto;z-index:999}
-    #analiz-sidebar.open{right:0}
-    #analiz-sidebar img{width:180px;display:block;margin:0 auto 20px;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.1)}
-    #analiz-sidebar h3{color:var(--red);text-align:center;margin-bottom:10px}
-    #analiz-sidebar p{font-size:.95rem;color:var(--dark);margin-bottom:15px}
-    #analiz-sidebar .quote{font-style:italic;color:var(--red);text-align:center;margin:20px 0;font-size:1rem}
-    .close-btn{position:absolute;top:15px;right:20px;font-size:1.5rem;color:var(--red);cursor:pointer;background:none;border:none;font-weight:bold}
-  </style>
 </head>
-<body>
 
-  <section class="hero-outer">
-    <div class="hero">
-      <div class="hero-media">
-        <img src="assets/analiz.png" alt="Analiz — analista de dados">
+<body>
+  <!-- Loader de navegação -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-spinner" role="status" aria-label="Carregando"></div>
+  </div>
+
+
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html">Analiz · Data Lab | Home</a>
       </div>
 
-      <div class="hero-content">
-        <h1>Olá, eu sou a Analiz 👩‍💻</h1>
-        <h2>Analista de Dados & exploradora de processos</h2>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="dashboards/index.html">Dashboards</a>
+        <a href="automacoes/index.html">Automações</a>
+        <a href="outros_temas/index.html">Estudos aplicados</a>
+      </nav>
+    </div>
+  </header>
 
-        <p class="highlight">O conhecimento da vez é sobre clareza e impacto com dados.</p>
-        <p>ANALIZ é um laboratório onde <strong>dados viram decisões</strong>. Aqui eu exploro <strong>automação financeira</strong>, <strong>documentação de processos</strong> e <strong>análise orientada a regras de negócio</strong>, conectando dados, finanças e tecnologia para transformar complexidade em clareza.</p>
+  <!-- HERO -->
+  <main id="conteudo">
+    <section class="hero-outer">
+      <div class="hero">
 
-        <div class="cta-buttons">
-          <a class="cta-knowledge" href="documentacao.html">A Importância da Documentação</a>
-          <a class="cta-knowledge" href="roi.html">ROI em Dados</a>
-          <a class="cta-knowledge" href="pdd.html">Automação PDD Fiscal</a>
-</div>
+        <div class="hero-media">
+          <img src="assets//img/analiz.png" alt="Analiz — analista de dados" loading="lazy" />
+        </div>
+
+        <div class="hero-content">
+          <h1>Olá, eu sou a Darlliane 👋</h1>
+          <h2>Analista de Dados com foco em eficiência operacional e suporte à decisão.</h2>
+
+          <p class="highlight">
+            Analiz é o laboratório onde organizo e apresento meus projetos em dados.
+          </p>
+
+          <p>
+            Aqui concentro <strong>dashboards</strong>, <strong>automações</strong> e
+            <strong>estudos aplicados</strong> desenvolvidos a partir da minha atuação
+            como analista de dados, conectando <strong>dados, finanças e tecnologia</strong>
+            para transformar complexidade em clareza e impacto real.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Dados bem estruturados sustentam decisões melhores.
+        <br />
+        <strong>Analiz · Data Lab</strong> — projetos desenvolvidos por Darlliane Oliveira.
+      </p>
+
+      <div class="footer-icons" aria-label="Links sociais">
+        <a href="https://www.linkedin.com/in/darlliane-oliveira/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets//img/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+
+        <a href="https://github.com/darllidso" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="assets//img/icons/github.svg" alt="GitHub" />
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1v9AyhOX_EQFpCGU3636ZcON1fQlFMmdj/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          aria-label="Currículo"
+        >
+          <img src="assets//img/icons/file-text.svg" alt="Currículo PDF" />
+        </a>
       </div>
     </div>
-  </section>
-
-  <footer>
-    Feito com ❤️ por Dados, mostrando que dados ganham sentido quando viram histórias.
   </footer>
 
-  <button class="btn-analiz" onclick="toggleAnaliz()">Sobre Analiz</button>
+  <!-- BOTÃO SIDEBAR -->
+  <button class="btn-analiz" type="button">
+    <span class="btn-text">Sobre mim</span>
+  </button>
 
-  <aside id="analiz-sidebar" aria-label="Quem é Analiz">
-    <button class="close-btn" onclick="toggleAnaliz()" aria-label="Fechar">×</button>
-    <img src="assets/analiz_apresentando.png" alt="Analiz apresentando dados">
-    <h3>Analiz</h3>
-    <p class="quote">“Documentar é cuidar: é tornar acessível o que antes era só técnico.”</p>
-    <p>Analiz é uma <strong>analista de dados</strong> criada para aproximar pessoas da inteligência analítica, traduzindo números em significado e processos em clareza.</p>
-    <p>Ela nasceu de uma ideia simples: <em>o mundo dos dados pode ser mais humano</em>. A cada projeto, Analiz une lógica, empatia e design para mostrar que análise é, acima de tudo, uma forma de contar histórias verdadeiras.</p>
-    <p>Mais do que uma personagem, Analiz é parceira de aprendizado, curiosa, empática e apaixonada por clareza.</p>
+  <!-- SIDEBAR -->
+  <aside id="analiz-sidebar" aria-label="Sobre mim">
+    <img class="profile-pic" src="assets//img/darlli.jpeg" alt="Foto de Darlliane Oliveira" loading="lazy" />
+
+    <h3>Darlliane Oliveira</h3>
+
+    <p>
+      Sou Analista de Dados com cerca de 4 anos de experiência, atuando na análise
+      e estruturação de dados para apoiar a tomada de decisão.
+    </p>
+
+    <p>
+      Minha trajetória começou na área de <strong>finanças</strong>, o que me deu base sólida em regras
+      de negócio e leitura de indicadores. A partir disso, migrei para dados, trabalhando com
+      <strong>dashboards</strong>, <strong>automações</strong> e <strong>análises aplicadas</strong>.
+    </p>
+
+    <p>
+      Hoje conecto <strong>dados, processos</strong> e <strong>negócio</strong>, com foco em eficiência operacional,
+      clareza da informação e impacto real nas decisões.
+    </p>
   </aside>
 
-  <script>
-    function toggleAnaliz(){
-      document.getElementById('analiz-sidebar').classList.toggle('open');
-    }
-  </script>
+  <!-- JS ÚNICO -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

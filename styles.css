@@ -1,0 +1,566 @@
+/* =====================================================
+   DESIGN TOKENS — GLOBAL
+   Usado em todas as páginas
+===================================================== */
+
+:root{
+  --red:#EC0000;
+  --dark:#333333;
+  --gray:#6D6D6D;
+  --light:#C2C2C2;
+  --bg:#F0F0F0;
+}
+
+
+/* =====================================================
+   RESET + BASE GLOBAL
+   Afeta todas as páginas do site
+===================================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+  font-family:Poppins, sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
+  overflow-x:hidden;
+  display:flex;
+  flex-direction:column;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+
+/* =====================================================
+   NAVBAR — GLOBAL
+   Usada em:
+   - Home (index.html)
+   - Dashboards
+   - Automações
+   - PDD
+===================================================== */
+
+.top-nav{
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+
+.nav-container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Marca / Link Home */
+
+.nav-brand a,
+.nav-brand a:visited{
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.nav-brand a:hover{
+  color: var(--red);
+}
+
+/* Links de navegação */
+
+.nav-links a,
+.nav-links a:visited{
+  text-decoration:none;
+  color:var(--dark);
+  font-weight:600;
+  font-size:.95rem;
+  margin-left:18px;
+}
+
+.nav-links a:hover{
+  color:var(--red);
+}
+
+
+/* =====================================================
+   HERO — HOME (index.html)
+===================================================== */
+
+.hero-outer{
+  background:#fff;
+  border-bottom:1px solid #eee;
+  flex-grow:1;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr;
+  align-items:center;
+  gap:22px;
+  max-width:1100px;
+  margin:0 auto;
+  padding:28px 18px;
+}
+
+/* Layout hero em telas maiores */
+
+@media(min-width:900px){
+  .hero{
+    grid-template-columns:0.9fr 1.1fr;
+    gap:40px;
+    padding:40px 24px;
+  }
+}
+
+/* Imagem principal da home */
+
+.hero-media{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-media img{
+  width:min(62vw,300px);
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:50%;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+}
+
+@media(min-width:900px){
+  .hero-media img{
+    width:70%;
+    max-width:360px;
+  }
+}
+
+/* Conteúdo textual da home */
+
+.hero-content h1{
+  font-size:clamp(1.6rem,4vw,2.6rem);
+  color:var(--red);
+  line-height:1.15;
+  margin-bottom:6px;
+}
+
+.hero-content h2{
+  font-weight:400;
+  color:#8b8b8b;
+  font-size:clamp(1rem,2.4vw,1.35rem);
+  margin-bottom:10px;
+}
+
+.hero-content .highlight{
+  color:var(--red);
+  font-weight:700;
+  font-size:clamp(.98rem,2.2vw,1.05rem);
+  margin-bottom:4px;
+  display:inline-block;
+}
+
+.hero-content p{
+  color:#565656;
+  margin:8px 0 16px;
+  font-size:clamp(.95rem,2.2vw,1rem);
+}
+
+
+/* =====================================================
+   FOOTER — GLOBAL
+   Usado em todas as páginas
+===================================================== */
+
+.site-footer{
+  background: #EAEAEA;
+  color: #4a4a4a;
+  padding: 22px 18px;
+  border-top: 1px solid #d5d5d5;
+}
+
+.footer-content{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  text-align:center;
+}
+
+.footer-text{
+  font-size:.85rem;
+  line-height:1.45;
+  color:#4a4a4a;
+}
+
+.footer-text strong{
+  color:#222;
+  font-weight:600;
+}
+
+/* Ícones do footer */
+
+.footer-icons{
+  display:flex;
+  gap:18px;
+}
+
+.footer-icons a{
+  color:#555;
+}
+
+.footer-icons a:hover{
+  color: var(--red);
+}
+
+.footer-icons img{
+  width:18px;
+  height:18px;
+  opacity:.85;
+  transition:.2s ease;
+}
+
+.footer-icons img:hover{
+  opacity:1;
+  transform:translateY(-1px);
+}
+
+
+/* =====================================================
+   SIDEBAR ANALIZ — HOME (index.html)
+===================================================== */
+
+.btn-analiz{
+  position:fixed;
+  right:12px;
+  bottom:24px;
+  background:#6D6D6D;
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  font-size:1rem;
+  font-weight:600;
+  border-radius:30px;
+  cursor:pointer;
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+  transition:.3s;
+  z-index:1000;
+}
+
+.btn-analiz:hover{
+  background:#333;
+}
+
+#analiz-sidebar{
+  position:fixed;
+  top:0;
+  right:-400px;
+  width:min(92vw,380px);
+  height:100%;
+  background:#fff;
+  box-shadow:-2px 0 15px rgba(0,0,0,.2);
+  transition:right .4s ease;
+  padding:40px 25px;
+  overflow-y:auto;
+  z-index:999;
+}
+
+#analiz-sidebar.open{
+  right:0;
+}
+
+/* Conteúdo interno do sidebar */
+
+#analiz-sidebar img{
+  display:block;
+  margin:0 auto 20px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+#analiz-sidebar .profile-pic{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+  margin-bottom:16px;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+#analiz-sidebar h3{
+  color:var(--red);
+  text-align:center;
+  margin-bottom:10px;
+}
+
+#analiz-sidebar p{
+  font-size:.85rem;
+  line-height:1.45;
+  color:var(--dark);
+  margin-bottom:12px;
+}
+
+#analiz-sidebar .quote{
+  font-style:italic;
+  color:var(--red);
+  text-align:center;
+  margin:20px 0;
+  font-size:1rem;
+}
+
+
+/* =====================================================
+   PÁGINAS ÍNDICE
+   Usadas em:
+   - dashboards/index.html
+   - automacoes/index.html
+===================================================== */
+
+.dashboard-page{
+  max-width:1100px;
+  margin:0 auto;
+  padding:36px 18px 60px;
+}
+
+/* Cabeçalho das páginas índice */
+
+.dashboard-header{
+  margin-bottom:28px;
+}
+
+.dashboard-header h1{
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  color:var(--dark);
+  margin-bottom:6px;
+  font-weight:700;
+}
+
+.dashboard-header p{
+  color:#8b8b8b;
+  font-size:.95rem;
+  line-height:1.5;
+}
+
+/* Grid de cards */
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:22px;
+}
+
+/* Cards — primeira definição (estrutura base) */
+
+
+
+.dashboard-card h3{
+  color:var(--dark);
+  margin-bottom:6px;
+  font-size:1rem;
+  font-weight:600;
+}
+
+.dashboard-card p{
+  font-size:.9rem;
+  color:#565656;
+  line-height:1.45;
+  margin-bottom:1px;
+}
+
+/* Links internos (quando existirem) */
+
+.card-links{
+  display:flex;
+  gap:14px;
+}
+
+.card-links a{
+  font-size:.85rem;
+  font-weight:600;
+  text-decoration:none;
+  color:var(--red);
+}
+
+.card-links a:hover{
+  text-decoration:underline;
+}
+
+/* Cards — segunda definição
+   (efeito visual e interação)
+   Sobrescreve parcialmente a definição acima
+*/
+
+.dashboard-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+
+.dashboard-card img {
+  transition: transform .3s ease;
+}
+
+.dashboard-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Botão padrão dos cards */
+
+.btn-dashboard {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid var(--red);
+  color: var(--red);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease, transform .2s ease;
+}
+
+.btn-dashboard:hover {
+  background: var(--red);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* =====================================================
+   LOADER GLOBAL — TRANSIÇÃO ENTRE PÁGINAS
+===================================================== */
+
+#page-loader{
+  position:fixed;
+  inset:0;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease;
+  z-index:9999;
+}
+
+#page-loader.active{
+  opacity:1;
+  pointer-events:all;
+}
+
+/* Spinner simples */
+
+.loader-spinner{
+  width:42px;
+  height:42px;
+  border:4px solid #eee;
+  border-top:4px solid var(--red);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to{ transform:rotate(360deg); }
+}
+
+/* =====================================================
+   ANTI-CLS — ESTABILIZAÇÃO DE LAYOUT
+===================================================== */
+
+html{
+  font-size:16px;
+}
+
+body{
+  font-size:1rem;
+}
+
+.dashboard-card{
+  contain: layout paint;
+}
+
+.dashboard-grid{
+  align-content:start;
+}
+
+/* =======================================================
+   Estudos aplicados – CSS FINAL
+   Escopo: body.page-estudos
+   ======================================================= */
+
+
+/* -------- Imagem do card -------- */
+.page-estudos .dashboard-card .card-cover {
+  width: 100%;
+  height: 120px;           /* imagem menor e consistente */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* -------- Título -------- */
+.page-estudos .dashboard-card h3 {
+  font-size: 1.06rem;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* -------- Tags -------- */
+.page-estudos .dashboard-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 4px;
+}
+
+.page-estudos .dashboard-card .tag-pill {
+  font-size: 0.62rem;      /* tags pequenas */
+  line-height: 1;
+  padding: 2px 7px;
+  border-radius: 999px;
+
+  background: #fdeeee;     /* vermelho bem claro */
+  color: #b42318;
+  border: 1px solid rgba(180, 35, 24, 0.15);
+
+  font-weight: 400;
+  letter-spacing: 0.015em;
+}
+
+/* -------- Texto -------- */
+.page-estudos .dashboard-card p {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+/* -------- Botão -------- */
+.page-estudos .dashboard-card .btn-dashboard {
+  margin-top: auto;        /* trava o botão no fundo */
+  align-self: flex-start;
+}

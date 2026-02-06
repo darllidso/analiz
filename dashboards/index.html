@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboards | Analiz · Data Lab</title>
+  <meta name="description" content="Projetos de dashboards e análises com foco em clareza, contexto de negócio e apoio à decisão." />
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS GLOBAL -->
+ <script src="../assets/js/head.js"></script>
+</head>
+
+<body>
+  <!-- Loader de navegação -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-spinner" role="status" aria-label="Carregando"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">Analiz · Data Lab | Home</a>
+      </div>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="../dashboards/index.html" aria-current="page">Dashboards</a>
+        <a href="../automacoes/index.html">Automações</a>
+        <a href="../outros_temas/index.html">Estudos aplicados</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main id="conteudo" class="dashboard-page">
+    <section class="dashboard-header">
+      <h1>Dashboards</h1>
+      <p>
+        Projetos de visualização e análise desenvolvidos com foco em clareza,
+        contexto de negócio e apoio à decisão.
+      </p>
+    </section>
+
+    <section class="dashboard-grid" aria-label="Lista de dashboards">
+      <!-- PROJETO 01: Vendas -->
+      <article class="dashboard-card">
+        <a
+          href="https://darllidso.github.io/01_dashboard_vendas/"
+          target="_blank"
+          rel="noopener"
+          class="dashboard-thumb"
+          aria-label="Abrir Dashboard de Vendas (nova aba)"
+        >
+          <img
+            src="../assets//img/dashboards/vendas.png"
+            alt="Dashboard de Vendas - Power BI"
+            loading="lazy"
+          />
+        </a>
+
+        <h3>Dashboard de Vendas</h3>
+
+        <p>
+          Visualização de desempenho comercial com KPIs, evolução temporal
+          e análise por categoria.
+        </p>
+
+        <div class="card-actions">
+          <a
+            href="https://darllidso.github.io/01_dashboard_vendas/"
+            target="_blank"
+            rel="noopener"
+            class="btn-dashboard"
+          >
+            Ver dashboard
+          </a>
+        </div>
+      </article>
+
+      <!-- PLACEHOLDERS -->
+      <article class="dashboard-card placeholder" aria-label="Projeto em breve">
+        <h3>Em breve</h3>
+      </article>
+
+      <article class="dashboard-card placeholder" aria-label="Projeto em breve">
+        <h3>Em breve</h3>
+      </article>
+
+      <article class="dashboard-card placeholder" aria-label="Projeto em breve">
+        <h3>Em breve</h3>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Dados bem estruturados sustentam decisões melhores.
+        <br />
+        <strong>Analiz · Data Lab</strong> — projetos desenvolvidos por Darlliane Oliveira.
+      </p>
+
+      <div class="footer-icons" aria-label="Links sociais">
+        <a href="https://www.linkedin.com/in/darlliane-oliveira/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="/assets//img/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+
+        <a href="https://github.com/darllidso" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="/assets//img/icons/github.svg" alt="GitHub" />
+        </a>
+
+        <a
+          href="https://drive.google.com/file/d/1v9AyhOX_EQFpCGU3636ZcON1fQlFMmdj/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          aria-label="Currículo"
+        >
+          <img src="/assets//img/icons/file-text.svg" alt="Currículo PDF" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

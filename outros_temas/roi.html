@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROI na prática | Analiz · Data Lab</title>
+  <meta name="description" content="Estudo aplicado sobre ROI em dados: custos, benefícios e simulador para traduzir impacto técnico em valor de negócio.">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <script src="../assets/js/head.js"></script>
+
+  <!-- CSS específico da página -->
+  <link rel="stylesheet" href="styles_roi.css">
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-spinner" role="status" aria-label="Carregando"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">Analiz · Data Lab | Home</a>
+      </div>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="../dashboards/index.html">Dashboards</a>
+        <a href="../automacoes/index.html">Automações</a>
+        <a href="./index.html" aria-current="page">Estudos aplicados</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main id="conteudo" class="roi-page">
+
+    <!-- BACK LINK -->
+    <div class="back-link">
+      <a href="./index.html">← Voltar para Estudos aplicados</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <span class="pill">Decisão · Custos · Impacto</span>
+
+        <h1>ROI na prática</h1>
+
+        <p class="lead">
+          ROI é o elo entre o mundo técnico e o mundo dos negócios.
+          Aqui, traduzimos esforço, custos e benefícios em uma visão objetiva
+          de impacto para apoiar priorização e tomada de decisão.
+        </p>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="tabs" role="tablist" aria-label="Seções do estudo">
+      <button class="tab-btn active" data-tab="conceitos" role="tab" aria-selected="true">
+        Conceitos
+      </button>
+      <button class="tab-btn" data-tab="simulador" role="tab" aria-selected="false">
+        Simulador
+      </button>
+    </div>
+
+    <!-- CONCEITOS -->
+    <section id="conceitos" class="tab-pane active" role="tabpanel" aria-hidden="false">
+      <div class="grid grid-2">
+
+        <article class="card">
+          <h3>1. O que ROI resolve em dados?</h3>
+          <p class="muted">
+            ROI mede quanto valor um projeto entrega em relação ao custo.
+            Em vez de focar apenas em métricas técnicas, traduzimos resultados
+            para impacto financeiro e eficiência operacional.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>2. Fórmula essencial</h3>
+          <p class="muted">
+            ROI = (Benefício Líquido ÷ Custo Total) × 100%
+          </p>
+
+          <div class="acc" aria-label="Perguntas frequentes sobre ROI">
+
+            <div class="acc-item">
+              <div class="acc-head" role="button" tabindex="0" aria-expanded="false">
+                <span>O que é benefício líquido?</span>
+                <strong>+</strong>
+              </div>
+              <div class="acc-body">
+                Benefício líquido é o impacto que permanece após considerar
+                custos operacionais recorrentes.
+                Inclui receita adicional, custos evitados
+                e economia de tempo convertida em valor.
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <div class="acc-head" role="button" tabindex="0" aria-expanded="false">
+                <span>O que entra no custo total?</span>
+                <strong>+</strong>
+              </div>
+              <div class="acc-body">
+                <ul class="muted list">
+                  <li>Equipe técnica e produto</li>
+                  <li>Infraestrutura e cloud</li>
+                  <li>Ferramentas e licenças</li>
+                  <li>Dados e preparação</li>
+                  <li>MLOps e monitoramento</li>
+                  <li>Governança, segurança e LGPD</li>
+                  <li>Documentação e adoção</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>3. Exemplo prático</h3>
+          <p class="muted">
+            Um modelo de recomendação aumenta o ticket médio em 4%
+            e reduz o abandono de carrinho em 6%.
+            Em 12 meses, gera R$ 380 mil em receita adicional.
+            <br><strong>Benefício líquido</strong>: R$ 340 mil
+            <br><strong>ROI</strong>: 242,9%
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>4. ROI como critério de decisão</h3>
+          <p class="muted">
+            ROI ajuda a comparar iniciativas e priorizar investimentos.
+            O ponto crítico é registrar premissas,
+            justificar estimativas e medir resultados ao longo do tempo.
+          </p>
+        </article>
+
+      </div>
+
+      <p class="footer-note">
+        Base do estudo:
+        <a href="https://www.datacamp.com/pt/blog/data-science-roi" target="_blank" rel="noopener">
+          DataCamp
+        </a>
+      </p>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section id="simulador" class="tab-pane" role="tabpanel" aria-hidden="true">
+      <article class="card">
+
+        <h3>💡 Simule seu ROI</h3>
+
+        <p class="muted">
+          Informe os custos do projeto e o benefício líquido estimado.
+          <br>
+          <span class="help">
+            Benefício líquido = receita adicional + custos evitados + economia de tempo − custos operacionais.
+          </span>
+        </p>
+
+        <div class="sim-grid">
+          <div class="input">
+            <label for="custo-dev">Custo com desenvolvedor (R$)</label>
+            <input id="custo-dev" type="text" inputmode="decimal" placeholder="Ex.: 80.000">
+          </div>
+
+          <div class="input">
+            <label for="custo-train">Custo com treinamento/adoção (R$)</label>
+            <input id="custo-train" type="text" inputmode="decimal" placeholder="Ex.: 15.000">
+          </div>
+
+          <div class="input">
+            <label for="custo-infra">Infraestrutura / operação (R$)</label>
+            <input id="custo-infra" type="text" inputmode="decimal" placeholder="Ex.: 20.000">
+          </div>
+
+          <div class="input">
+            <label for="custo-outros">Outros custos (R$)</label>
+            <input id="custo-outros" type="text" inputmode="decimal" placeholder="Ex.: 5.000">
+          </div>
+
+          <div class="input full">
+            <label for="beneficio">Benefício líquido (R$)</label>
+            <input id="beneficio" type="text" inputmode="decimal" placeholder="Ex.: 340.000">
+          </div>
+        </div>
+
+        <div class="kpi" id="kpi">
+          <div class="box">
+            <div class="val" id="k-custos">R$ 0,00</div>
+            <div class="lab">Custo total</div>
+          </div>
+
+          <div class="box">
+            <div class="val" id="k-benef">R$ 0,00</div>
+            <div class="lab">Benefício líquido</div>
+          </div>
+
+          <div class="box">
+            <div class="val" id="k-roi">0%</div>
+            <div class="lab">
+              ROI <span class="badge neg" id="k-badge">—</span>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        Dados bem estruturados sustentam decisões melhores.
+        <br>
+        <strong>Analiz · Data Lab</strong> — projetos desenvolvidos por Darlliane Oliveira.
+      </p>
+
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/in/darlliane-oliveira/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="../assets/img/icons/linkedin.svg" alt="LinkedIn">
+        </a>
+
+        <a href="https://github.com/darllidso" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="../assets/img/icons/github.svg" alt="GitHub">
+        </a>
+
+        <a href="https://drive.google.com/file/d/1v9AyhOX_EQFpCGU3636ZcON1fQlFMmdj/view?usp=sharing" target="_blank" rel="noopener" aria-label="Currículo">
+          <img src="../assets/img/icons/file-text.svg" alt="Currículo PDF">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS global -->
+  <script src="../assets/js/main.js" defer></script>
+
+  <!-- JS específico do ROI -->
+  <script src="../assets/js/roi.js" defer></script>
+
+</body>
+</html>
